@@ -10,10 +10,9 @@ process check_design {
     // publishDir "output/check_design/", mode: 'copy'
 
     script:
-    // comparison_file = comparison ? "-c ${comparison}" : ''
     comparison_file = comparison ? "-c $comparison" : ''
     """
-    check_design.py $design $comparison_file
+    check_design.py $comparison_file $design
     """
 
 }
