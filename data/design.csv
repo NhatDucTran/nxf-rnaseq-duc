@@ -1,3 +1,3 @@
 group,sample,read_1,read_2
-A,HelaCtrl_1,/data/in4611_60_S255_L006_R1_001.fastq.gz,/data/in4611_60_S255_L006_R2_001.fastq.gz
-B,HelaCtrl_2,/data/in4611_61_S256_L006_R1_001.fastq.gz,/data/in4611_61_S256_L006_R2_001.fastq.gz
+A,HelaCtrl_1,data/in4611_60_S255_L006_R1_001.fastq.gz,data/in4611_60_S255_L006_R2_001.fastq.gz
+B,HelaCtrl_2,data/in4611_61_S256_L006_R1_001.fastq.gz,data/in4611_61_S256_L006_R2_001.fastq.gz

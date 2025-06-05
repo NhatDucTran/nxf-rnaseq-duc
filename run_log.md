@@ -14,9 +14,11 @@ nextflow run main.nf \
     --design ./data/design.csv \
     --output ./output/check_design/ \
     --comparison ./data/comparison.csv \
+    --deliver_fastqs true \
     -resume
 
 nextflow run main.nf \
     --design ./data/design_basic.csv \
     --output ./output/check_design/ \
+    --deliver_fastqs true \
     -resume
