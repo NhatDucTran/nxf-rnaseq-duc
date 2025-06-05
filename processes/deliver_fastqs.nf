@@ -16,6 +16,9 @@ process deliver_fastqs {
     output:
     path "${meta.name}_R*.fastq.gz", includeInputs: true, emit: downloads
     path "${meta.name}_fastq_md5sum.txt", emit: md5sum
+
+    when:
+    params.deliver_fastqs
     
     script:
     if (meta.single_end) {
