@@ -1,3 +1,4 @@
 data/*.fastq.gz
 .nextflow*
 work/
+original_fastqs/
