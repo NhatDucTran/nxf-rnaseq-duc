@@ -1,14 +1,19 @@
+params.publish_dir = "fastqc"
 
+process fastqc {
+    tag "$meta.name"
+    publishDir "${params.publish_dir}", mode: 'copy'
 
-// process fastqc {
-//     tag "$meta.name"
+    input:
+    tuple val(meta), path(reads)
 
-//     input:
-//     tuple val(meta), path(reads)
+    output:
+    path "*.html"
+    path "*.zip"
 
-//     output:
-
-
-//     script:
-
-// }
+    script:
+    """
+    fastqc ${reads[0]}
+    fastqc ${reads[1]}
+    """
+}

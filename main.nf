@@ -2,6 +2,7 @@ include { check_design } from './processes/check_design'
 include { setup_channel } from './libs/setup_channel'
 include { parse_design } from './libs/parse_design'
 include { deliver_fastqs } from './processes/deliver_fastqs'
+include { fastqc } from './processes/fastqc'
 
 workflow {
     params.comparison = params.comparison ?: null
@@ -30,4 +31,7 @@ workflow {
         .set {reads} //Tạo 2 channel: reads.single, reads.multiple
         
     deliver_fastqs(reads.single)
+
+    fastqc(reads.single)
+
 }
