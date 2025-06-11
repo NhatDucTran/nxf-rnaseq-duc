@@ -3,3 +3,4 @@ data/*.fastq.gz
 work/
 original_fastqs/
 fastqc/
+trim_galore/
